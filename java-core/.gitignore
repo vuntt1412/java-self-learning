@@ -1,8 +1,16 @@
 # Default ignored files
 /shelf/
-/workspace.xml
+/.idea/workspace.xml
 # Datasource local storage ignored files
 /../../../../../../:\Projects\vuntt1412\java-self-learning\java-core\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# Maven
+log/*
+target/
+# Intellij
+.idea/
+*.iml
+*.iws
+out/

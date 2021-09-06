@@ -20,4 +20,17 @@ public class Point {
         return y == point.y;
     }
 
+    /**
+     * hashCode() contract:
+     * internal consistency: must return the same value during the execution of an application
+     * equals consistency: if two objects are equal according the equals() then calling hashCode() on the two objects must produce the same integer result
+     * collisions: but unequal objects may have the same hashCode value (relevant to collision in Hashtable)
+     * @return
+     */
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        return result;
+    }
 }

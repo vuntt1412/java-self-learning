@@ -14,9 +14,7 @@
 package com.vuntt1412.equalsandhashcode;
 
 import java.sql.Timestamp;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
@@ -62,6 +60,15 @@ public class Application {
         System.out.println(dateList.contains(date));
         System.out.println(dateList.contains(timestamp));
         // This behavior of the Timestamp class was a mistake and should not be emulated(mixing them)
+
+        System.out.println("override equals() but not hashCode() that violates the second rule");
+        Map<Player, String> map = new HashMap<>();
+        map.put(new Player("CR7"), "WorldClass");
+        System.out.println(map.get(new Player("CR7"))); //expect to return "WorldClass"
+        // Player still uses the default implementation of hashCode which returns a different value for every instance
+        /**
+         * In conclusion, always override hashCode() when you override equals()
+         */
 
     }
 }

@@ -1,21 +1,21 @@
-/**
- * The default implementation of equals() says that each instance of the class is equal only to itself
- * and this is right thing to do if there is no need for the class to provide a "logical equality" test (e.g. Pattern class)
- * or a superclass has already overridden equals() and it's appropriate for its inherited classes
- * (e.g. most Set implementations inherit their equals implementation from AbstractSet)
- * <p>
- * <p>
- * In this example we'll consider problems when overriding equals(), we must adhere to its general contract:
- * reflexive: an object must equal itself
- * symmetric: x.equals(y) must return the same result as y.equals(x)
- * transitive: if x.equals(y) and y.equals(z) then also x.equals(z)
- * consistent: the value of equals() should change only if a property that is contained in equals() changes (no randomness allowed)
- */
 package com.vuntt1412.equalsandhashcode;
 
 import java.sql.Timestamp;
 import java.util.*;
 
+/**
+ * The default implementation of equals() says that each instance of the class is equal only to itself
+ * <p>
+ * This is right thing to do if there is no need for the class to provide a "logical equality" test (e.g. Pattern class)
+ * or a superclass has already overridden equals() and it's appropriate for its inherited classes
+ * (e.g. most Set implementations inherit their equals implementation from AbstractSet)
+ * <p>
+ * In this example we'll consider problems when overriding equals(), we must adhere to its general contract:<p>
+ * reflexive: an object must equal itself<p>
+ * symmetric: x.equals(y) must return the same result as y.equals(x)<p>
+ * transitive: if x.equals(y) and y.equals(z) then also x.equals(z)<p>
+ * consistent: the value of equals() should change only if a property that is contained in equals() changes (no randomness allowed)
+ */
 public class Application {
     public static void main(String[] args) {
         System.out.println("\nPlayer is a superclass uses instanceof-based equals method ");

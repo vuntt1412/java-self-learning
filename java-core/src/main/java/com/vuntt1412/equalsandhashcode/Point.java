@@ -21,11 +21,12 @@ public class Point {
     }
 
     /**
-     * hashCode() contract:
-     * internal consistency: must return the same value during the execution of an application
-     * equals consistency: if two objects are equal according the equals() then calling hashCode() on the two objects must produce the same integer result
-     * collisions: but unequal objects may have the same hashCode value (relevant to collision in Hashtable)
-     * @return
+     * hashCode() contract:<p>
+     * internal consistency: must return the same value during the execution of an application<p>
+     * equals consistency: if two objects are equal according the equals() then calling hashCode() on the two objects must produce the same integer result<p>
+     * collisions: but unequal objects may have the same hashCode value (relevant to collision in Hashtable)<p>
+     *
+     * @return an integer value for the object in runtime. By default, an integer value is derived from the memory address of the object in a heap
      */
     @Override
     public int hashCode() {

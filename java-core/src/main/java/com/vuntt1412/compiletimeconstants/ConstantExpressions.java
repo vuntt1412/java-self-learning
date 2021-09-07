@@ -4,9 +4,7 @@ public class ConstantExpressions {
     public static final String CONSTANT = "hello";
 
     public static void main(String[] args) {
-        /*
-         * String literal
-         * */
+        // String literal
         String s = "helloWorld";
         String s1 = "hello" + "World";
 
